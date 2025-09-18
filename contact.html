@@ -43,107 +43,123 @@
   </header>
   <!-- end header -->
 
-  <!-- headline -->
-  <section id="inner-headline">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <h2 class="pageTitle">Contactos</h2>
+<!-- headline -->
+<section id="inner-headline">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 class="pageTitle">Contactos</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- content -->
+<section id="content">
+  <div class="container">
+
+    <!-- Mapa -->
+    <div class="row">
+      <div class="col-md-12">
+        <div style="overflow:hidden;border-radius:6px;">
+          <iframe
+            title="Mapa - Queen Academy"
+            width="100%"
+            height="300"
+            style="border:0;"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Avenida%20da%20Liberdade%2C%20Pa%C3%A7o%20de%20Sousa%2C%204560-380%20Penafiel&output=embed">
+          </iframe>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- content -->
-  <section id="content">
-    <div class="container">
+    <!-- Form + Info -->
+    <div class="row" style="margin-top:25px;">
+      <!-- Formulário -->
+      <div class="col-md-6">
+        <br>
+        <div class="alert alert-success hidden" id="contactSuccess">
+          <strong>Enviado!</strong> A tua mensagem foi enviada com sucesso.
+        </div>
+        <div class="alert alert-error hidden" id="contactError">
+          <strong>Erro!</strong> Ocorreu um problema ao enviar a mensagem.
+        </div>
 
-      <!-- Mapa -->
-      <div class="row">
-        <div class="col-md-12">
-          <div style="overflow:hidden;border-radius:6px;">
-            <iframe
-              title="Mapa - Queen Academy"
-              width="100%"
-              height="300"
-              style="border:0;"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=Avenida%20da%20Liberdade%2C%20Pa%C3%A7o%20de%20Sousa%2C%204560-380%20Penafiel&output=embed">
-            </iframe>
-          </div>
+        <div class="contact-form">
+          <!-- Netlify Forms + redirect p/ thanks.html -->
+          <form
+            id="contact-form"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            action="/thanks.html">
+
+            <!-- obrigatório para Netlify -->
+            <input type="hidden" name="form-name" value="contact" />
+
+            <!-- honeypot (anti-bot) -->
+            <p style="display:none;">
+              <label>Não preencher se for humano:
+                <input name="bot-field" />
+              </label>
+            </p>
+
+            <div class="form-group has-feedback">
+              <label for="name">Nome *</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="O teu nome" required>
+              <i class="fa fa-user form-control-feedback"></i>
+            </div>
+
+            <div class="form-group has-feedback">
+              <label for="email">Email *</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="nome@exemplo.com" required>
+              <i class="fa fa-envelope form-control-feedback"></i>
+            </div>
+
+            <div class="form-group has-feedback">
+              <label for="subject">Assunto *</label>
+              <input type="text" class="form-control" id="subject" name="subject" placeholder="Ex.: Marcação de aula">
+              <i class="fa fa-navicon form-control-feedback"></i>
+            </div>
+
+            <div class="form-group has-feedback">
+              <label for="message">Mensagem *</label>
+              <textarea class="form-control" rows="6" id="message" name="message" placeholder="Escreve aqui a tua mensagem" required></textarea>
+              <i class="fa fa-pencil form-control-feedback"></i>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
         </div>
       </div>
 
-      <!-- Form + Info -->
-      <div class="row" style="margin-top:25px;">
-        <!-- Formulário -->
-        <div class="col-md-6">
-          <br>
-          <div class="alert alert-success hidden" id="contactSuccess">
-            <strong>Enviado!</strong> A tua mensagem foi enviada com sucesso.
-          </div>
-          <div class="alert alert-error hidden" id="contactError">
-            <strong>Erro!</strong> Ocorreu um problema ao enviar a mensagem.
-          </div>
-
-          <div class="contact-form">
-            <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-              <!-- Hidden honeypot -->
-              <input type="hidden" name="form-name" value="contact">
-              <p style="display:none;">
-                <label>Não preencher se for humano: <input name="bot-field"></label>
-              </p>
-
-              <div class="form-group has-feedback">
-                <label for="name">Nome *</label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="O teu nome" required>
-                <i class="fa fa-user form-control-feedback"></i>
-              </div>
-              <div class="form-group has-feedback">
-                <label for="email">Email *</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="nome@exemplo.com" required>
-                <i class="fa fa-envelope form-control-feedback"></i>
-              </div>
-              <div class="form-group has-feedback">
-                <label for="subject">Assunto *</label>
-                <input type="text" class="form-control" id="subject" name="subject" placeholder="Ex.: Marcação de aula">
-                <i class="fa fa-navicon form-control-feedback"></i>
-              </div>
-              <div class="form-group has-feedback">
-                <label for="message">Mensagem *</label>
-                <textarea class="form-control" rows="6" id="message" name="message" placeholder="Escreve aqui a tua mensagem" required></textarea>
-                <i class="fa fa-pencil form-control-feedback"></i>
-              </div>
-              <button type="submit" class="btn btn-primary">Enviar</button>
-            </form>
-          </div>
+      <!-- Contacto direto -->
+      <div class="col-md-6">
+        <div class="title-box clearfix">
+          <h3 class="title-box_primary">Informações de contacto</h3>
         </div>
-
-        <!-- Contacto direto -->
-        <div class="col-md-6">
-          <div class="title-box clearfix">
-            <h3 class="title-box_primary">Informações de contacto</h3>
-          </div>
-          <h5>Fala connosco para marcações, dúvidas ou orçamentos.</h5>
-          <address style="margin-top:10px;">
-            <strong>Queen Academy</strong><br>
-            Avenida da Liberdade, Paço de Sousa<br>
-            4560-380 Penafiel, Porto
-          </address>
-          <p style="margin:8px 0;">
-            <i class="fa fa-phone"></i> +351 969 222 167<br>
-            <i class="fa fa-envelope"></i> <a href="mailto:rafaelsilva1823@gmail.com">rafaelsilva1823@gmail.com</a><br>
-          </p>
-          <p style="margin-top:12px;">
-            <i class="fa fa-clock-o"></i> Seg–Sex: 9h–20h &nbsp;|&nbsp; Sáb: 9h–13h<br>
-            <i class="fa fa-globe"></i> Aulas online e presenciais
-          </p>
-        </div>
+        <h5>Fala connosco para marcações, dúvidas ou orçamentos.</h5>
+        <address style="margin-top:10px;">
+          <strong>Queen Academy</strong><br>
+          Avenida da Liberdade, Paço de Sousa<br>
+          4560-380 Penafiel, Porto
+        </address>
+        <p style="margin:8px 0;">
+          <i class="fa fa-phone"></i> +351 969 222 167<br>
+          <i class="fa fa-envelope"></i> <a href="mailto:rafaelsilva1823@gmail.com">rafaelsilva1823@gmail.com</a><br>
+        </p>
+        <p style="margin-top:12px;">
+          <i class="fa fa-clock-o"></i> Seg–Sex: 9h–20h &nbsp;|&nbsp; Sáb: 9h–13h<br>
+          <i class="fa fa-globe"></i> Aulas online e presenciais
+        </p>
       </div>
+    </div>
 
-    </div><!-- /.container -->
-  </section><!-- /#content -->
+  </div><!-- /.container -->
+</section><!-- /#content -->
 
   <!-- footer -->
   <footer>
