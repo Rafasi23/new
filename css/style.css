@@ -1804,3 +1804,242 @@ header .navbar-nav > li > a {
   .navbar-brand img    { height: 56px; }
   header .navbar-nav > li > a { line-height: 70px; }
 }
+footer {
+  background: #009688;
+  color: #fff;
+  padding: 40px 0 20px 0;
+  font-size: 14px;
+}
+
+footer h5.widgetheading {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+footer .widget p,
+footer .widget address {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+footer .link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer .link-list li {
+  margin-bottom: 8px;
+}
+
+footer .link-list li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .link-list li a:hover {
+  text-decoration: underline;
+}
+
+#sub-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: 13px;
+}
+
+.social-network {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-network li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.social-network a {
+  color: #fff;
+  font-size: 18px;
+}
+/* ============ PALETA GLOBAL (override) ============ */
+:root{
+  --primary:#6A1B9A;
+  --primary-dark:#4A148C;
+  --primary-light:#AB47BC;
+  --tint:#F3E5F5;
+  --text-dark:#212121;
+  --text-light:#FFFFFF;
+}
+
+/* ====== HEADER / NAVBAR ====== */
+header .navbar-default{ background:#fff; border:none; }
+.navbar-default .navbar-brand{ color:var(--primary-light); }
+.navbar-default .navbar-nav>li>a{ color:#848484; }
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus{
+  color:var(--primary);
+  background:#fff;
+}
+.navbar .nav a:hover{ color:var(--primary) !important; }
+
+/* ====== LINKS GERAIS ====== */
+a{ color:var(--primary); }
+a:hover, a:focus{ color:var(--primary-light); }
+
+/* ====== BOTÕES ====== */
+.btn-primary{
+  background:var(--primary);
+  border-color:var(--primary);
+}
+.btn-primary:hover,
+.btn-primary:focus{
+  background:var(--primary-dark);
+  border-color:var(--primary-dark);
+}
+.btn-default:hover{ color:var(--primary); }
+
+/* ====== TÍTULOS / DESTAQUES ====== */
+.pageTitle, h1, h2, h3, .widgetheading{
+  color:var(--primary);
+}
+
+/* ====== BULLETS/CONTROLOS (ex. slider) ====== */
+.flex-control-paging li a{ background:rgba(0,0,0,.35); }
+.flex-control-paging li a.flex-active{
+  background:var(--primary);
+}
+
+/* ====== RODAPÉ ====== */
+footer{
+  background:var(--primary);
+  color:var(--text-light);
+}
+footer h5.widgetheading{ color:var(--tint); }
+footer .link-list li a{ color:var(--tint); }
+footer .link-list li a:hover{ color:var(--primary-light); }
+#sub-footer{
+  background:var(--primary-dark);
+  border-top:1px solid rgba(255,255,255,.2);
+}
+
+
+/* ============ PALETA AZUL ============ */
+:root {
+  --primary: #1E88E5;
+  --primary-dark: #1565C0;
+  --primary-light: #90CAF9;
+  --tint: #E3F2FD;
+  --text-dark: #212121;
+  --text-light: #FFFFFF;
+}
+
+/* HEADER / NAVBAR */
+.navbar-default .navbar-brand { color: var(--primary) !important; }
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus { color: var(--primary) !important; }
+.navbar .nav a:hover { color: var(--primary) !important; }
+
+/* LINKS */
+a { color: var(--primary); }
+a:hover, a:focus { color: var(--primary-dark); }
+
+/* BOTÕES */
+.btn-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+/* TÍTULOS */
+h1, h2, h3, .widgetheading, .pageTitle { color: var(--primary); }
+
+/* FUNDO GERAL */
+body { background: var(--tint); color: var(--text-dark); }
+section, #content, .widget, .box, .panel, .card, .well {
+  background: transparent;
+}
+.card, .panel, .well, .box.solid {
+  background: #FFFFFF;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+  border: 0;
+}
+
+/* BARRA DE TÍTULO (tipo “Sobre Mim”) */
+#inner-headline,
+.page-title-area,
+.pageTitleWrap {
+  background: var(--primary);
+  border-top: 4px solid var(--primary-dark);
+}
+#inner-headline .pageTitle,
+.page-title-area .pageTitle,
+.pageTitleWrap .pageTitle {
+  color: var(--text-light) !important;
+  padding: 22px 0;
+}
+
+/* RODAPÉ */
+footer {
+  background: var(--primary);
+  color: var(--text-light);
+}
+footer h5.widgetheading { color: var(--primary-light); }
+footer .link-list li a { color: var(--primary-light); }
+footer .link-list li a:hover { color: var(--text-light); }
+#sub-footer {
+  background: var(--primary-dark);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.social-network a { color: var(--primary-light); }
+.social-network a:hover { color: var(--text-light); }
+/* ===== Accordion / Painéis – override ===== */
+.panel-group .panel{
+  background:#FFFFFF;
+  border:1px solid rgba(0,0,0,.12);
+  box-shadow: 0 4px 12px rgba(0,0,0,.05);
+  border-radius:6px;
+  overflow:hidden;
+  margin-bottom:12px;
+}
+
+/* Cabeçalho do item (título) */
+.panel-heading{
+  background:#FFFFFF !important;
+  border-bottom:1px solid rgba(0,0,0,.06);
+  padding:12px 16px;
+}
+
+/* Link do título visível e clicável */
+.panel-title > a{
+  display:block;
+  color: var(--primary, #1E88E5) !important;  /* azul do tema */
+  font-weight:600;
+  text-decoration:none;
+}
+.panel-title > a:hover{
+  color: var(--primary-dark, #1565C0) !important;
+  text-decoration:none;
+}
+
+/* Corpo aberto do acordeão */
+.panel-group .panel-heading + .panel-collapse .panel-body{
+  background:#F7F9FC !important;   /* cinza muito claro */
+  color:#212121 !important;         /* texto escuro legível */
+  border-top:0;
+  padding:16px;
+}
+
+/* Espaçamento entre itens */
+.panel + .panel { margin-top:12px; }
+
+/* Em fundos azuis claros, remove fundo branco forçado do container */
+.accordion, .panel-group { background:transparent; }
