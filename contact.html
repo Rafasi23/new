@@ -88,15 +88,21 @@
           </div>
 
           <div class="contact-form">
-            <form id="contact-form" role="form" novalidate>
+            <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+              <!-- Hidden honeypot -->
+              <input type="hidden" name="form-name" value="contact">
+              <p style="display:none;">
+                <label>Não preencher se for humano: <input name="bot-field"></label>
+              </p>
+
               <div class="form-group has-feedback">
                 <label for="name">Nome *</label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="O teu nome">
+                <input type="text" class="form-control" id="name" name="name" placeholder="O teu nome" required>
                 <i class="fa fa-user form-control-feedback"></i>
               </div>
               <div class="form-group has-feedback">
                 <label for="email">Email *</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="nome@exemplo.com">
+                <input type="email" class="form-control" id="email" name="email" placeholder="nome@exemplo.com" required>
                 <i class="fa fa-envelope form-control-feedback"></i>
               </div>
               <div class="form-group has-feedback">
@@ -106,7 +112,7 @@
               </div>
               <div class="form-group has-feedback">
                 <label for="message">Mensagem *</label>
-                <textarea class="form-control" rows="6" id="message" name="message" placeholder="Escreve aqui a tua mensagem"></textarea>
+                <textarea class="form-control" rows="6" id="message" name="message" placeholder="Escreve aqui a tua mensagem" required></textarea>
                 <i class="fa fa-pencil form-control-feedback"></i>
               </div>
               <button type="submit" class="btn btn-primary">Enviar</button>
@@ -155,7 +161,8 @@
             </address>
             <p>
               <i class="fa fa-phone"></i> +351 969 222 167 <br>
-              <i class="fa fa-envelope"></i> rafaelsilva1823@gmail.com
+              <i class="fa fa-envelope"></i> 
+              <a href="mailto:rafaelsilva1823@gmail.com">rafaelsilva1823@gmail.com</a>
             </p>
           </div>
         </div>
@@ -194,9 +201,8 @@
             <p>Aulas de Excel</p>
           </div>
         </div>
-
-      </div><!-- /.row -->
-    </div><!-- /.container -->
+      </div>
+    </div>
 
     <div id="sub-footer">
       <div class="container">
@@ -206,8 +212,17 @@
           </div>
           <div class="col-lg-6 text-right">
             <ul class="social-network">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li>
+                <a href="#" target="_blank" rel="noopener" title="Facebook">
+                  <i class="fa fa-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/jos%C3%A9-silva-190553175/" 
+                   target="_blank" rel="noopener" title="LinkedIn">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
